@@ -44,7 +44,7 @@ woolim
 
 ## 실행 방법
 
-본 프로젝트는 **Android Studio에서 Android 기기를 연결하여 실행**했습니다.
+본 프로젝트는 Android Studio에서 Android 기기를 연결하여 실행했습니다.
 
 1. Android Studio에서 프로젝트를 엽니다.
 
@@ -54,7 +54,7 @@ woolim
 flutter pub get
 ```
 
-3. Android 휴대폰의 **개발자 옵션**과 **USB 디버깅**을 켠 뒤, USB 케이블로 PC와 연결합니다.
+3. Android 휴대폰의 개발자 옵션과 USB 디버깅을 켠 뒤, USB 케이블로 PC와 연결합니다.
 
 4. 연결된 기기를 확인합니다.
 
@@ -68,7 +68,7 @@ flutter devices
 flutter run
 ```
 
-또는 Android Studio 상단에서 Android 기기를 선택한 뒤 **Run ▶** 버튼을 눌러 실행합니다.
+또는 Android Studio 상단에서 Android 기기를 선택한 뒤 Run 버튼을 눌러 실행합니다.
 
 6. APK 파일이 필요한 경우 아래 명령어로 빌드합니다.
 
