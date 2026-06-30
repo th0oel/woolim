@@ -1,16 +1,70 @@
 # woolim
 
-A new Flutter project.
+## 프로젝트 소개
 
-## Getting Started
+**울림(woolim)**은 구음장애인의 의사소통을 돕기 위한 AI 기반 음성 교정 앱입니다.
 
-This project is a starting point for a Flutter application.
+발음이 부정확하거나 어눌한 사용자의 음성을 인식한 뒤, 보다 명확한 문장으로 교정하여 화면에 보여주고 TTS 기능을 통해 음성으로도 출력할 수 있도록 구현했습니다.
 
-A few resources to get you started if this is your first Flutter project:
+본 프로젝트는 뇌졸중, 뇌병변 장애, 파킨슨병, 루게릭병, 청각 장애를 동반한 구음장애인, 발음이 어눌한 일반 사용자 등 의사소통에 어려움을 겪는 사용자를 대상으로 합니다.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 개발 배경
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+일상생활에서 구음장애인은 자신의 의사를 정확히 전달하기 어려워 대화, 의료, 안내 서비스 등 다양한 상황에서 불편함을 겪습니다.
+
+울림은 이러한 문제를 해결하기 위해 단순 음성 인식(STT)을 넘어, 구음장애인의 발화를 보다 명확한 문장으로 교정해주는 서비스를 목표로 개발되었습니다.
+
+## 주요 기능
+
+- 음성 녹음 및 인식 기능
+- Whisper 기반 음성 인식 및 교정 기능
+- 원문과 교정문 동시 표시
+- 자주 사용하는 문장 저장 기능
+- 즐겨찾기 문장 관리
+- 저장된 문장 검색 기능
+- TTS를 통한 음성 출력
+- 사용자 친화적인 Flutter 기반 모바일 UI
+
+## 기술 스택
+
+### Frontend
+
+- Flutter
+- Dart
+
+### AI / Model
+
+- Whisper-small
+- PyTorch
+- Hugging Face
+- Google Colab
+- SpecAugment
+
+### Backend / Server
+
+- Python 기반 서버
+- AWS EC2
+- AWS S3
+
+### Data
+
+- AI-Hub 한국어 구음장애 음성 데이터셋
+- 무음 제거
+- 문장 단위 분리
+- 텍스트 매칭
+- 총 590쌍 학습 데이터 구축
+
+## 시스템 흐름
+
+```text
+사용자 음성 녹음
+        ↓
+Flutter 앱에서 서버로 음성 전송
+        ↓
+서버에서 Whisper 모델에 음성 전달
+        ↓
+음성 인식 및 문장 교정
+        ↓
+교정 결과를 앱 화면에 표시
+        ↓
+저장 / 검색 / 즐겨찾기 / TTS 기능 활용
